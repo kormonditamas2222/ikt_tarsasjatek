@@ -19,7 +19,7 @@ namespace tarsasjatek
             this.pos = 0;
         }
 
-        public string Name { get => name; set => name = value; }
+        public string Name { get => name;  }
         public int Pos { get => pos; set => pos = value; }
 
         public override string? ToString()
