@@ -82,5 +82,16 @@ namespace tarsasjatek
                 }
             }
         }
+        public void Kviz(Jatekos jatekos)
+        {
+            int barmi = random.Next(0, 3);
+            switch (barmi)
+            {
+                case 0: Console.WriteLine("Hány évig tartott a száz éves háború?"); if (int.Parse(Console.ReadLine()) == 116) { Console.WriteLine("Helyes válasz!"); Bonusz(jatekos); } else { Console.WriteLine("Rossz válasz!"); }; break;
+                case 1: Console.WriteLine("Hány proton található egy asztácium atomban?"); if (int.Parse(Console.ReadLine()) == 85) { Console.WriteLine("Helyes válasz!"); Bonusz(jatekos); } else { Console.WriteLine("Rossz válasz!"); }; ; break;
+                case 2: Console.WriteLine("Melyik a világ leghosszab folyója?"); if (Console.ReadLine() == "Amazonas") { Console.WriteLine("Helyes válasz!"); Bonusz(jatekos); } else { Console.WriteLine("Rossz válasz!"); }; ; break;
+                default: Console.WriteLine("kvíz rósz"); break;
+            }
+        }
     }
 }
