@@ -79,6 +79,7 @@ namespace tarsasjatek
                 {
                     jatekosok.Remove(item);
                     Console.WriteLine("a létezésed megszűnt :>");
+                    break;
                 }
             }
         }

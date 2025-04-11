@@ -18,7 +18,7 @@
                 string nev = Console.ReadLine();
                 jatekos.Add(new Jatekos(nev));
             }
-
+            Console.WriteLine($"Az elérendő mező: {tabla.Max_pos}");
             bool vege = false;
             do
             {
@@ -35,11 +35,13 @@
                     {
                         Console.WriteLine($"{jatekos[i].Name} akadály mezőre lépett");
                         tabla.Akadaly(jatekos[i]);
+                        Console.WriteLine(jatekos[i]);
                     }
                     else if (jatekos[i].Pos == tabla.Bonusz_pos)
                     {
                         Console.WriteLine($"{jatekos[i].Name} bónusz mezőre lépett");
-                        tabla.Akadaly(jatekos[i]);
+                        tabla.Bonusz(jatekos[i]);
+                        Console.WriteLine(jatekos[i]);
                     }
                     else if (jatekos[i].Pos == tabla.Halal_pos)
                     {
@@ -49,6 +51,7 @@
                         {
                             vege = true;
                             Console.WriteLine($"{jatekos[0].Name} megnyerte a játékot.");
+                            break;
                         }
                     }
                     else if (jatekos[i].Pos == tabla.Kviz_pos)
@@ -61,8 +64,9 @@
                     {
                         vege = true;
                         Console.WriteLine($"{jatekos[i].Name} megnyerte a játékot.");
+                        break;
                     }
-                    Console.WriteLine(jatekos[i]);
+                    //Console.WriteLine(jatekos[i]);
                     Console.ReadLine();
                 }
             }
