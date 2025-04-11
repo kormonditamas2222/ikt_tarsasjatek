@@ -19,6 +19,7 @@
                 jatekos.Add(new Jatekos(nev));
             }
             Console.WriteLine($"Az elérendő mező: {tabla.Max_pos}");
+            Console.WriteLine("Dobni ENTER gombbal lehet.");
             bool vege = false;
             do
             {
